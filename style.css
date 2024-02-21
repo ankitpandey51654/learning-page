@@ -254,6 +254,7 @@ ul li{
     }
     .footer{
         flex-direction: column;
+        background-color: blue;
     }
 }
 
