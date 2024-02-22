@@ -1,3 +1,4 @@
+// this is for search section
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-input");
   const cards = document.querySelectorAll(".card");
@@ -85,6 +86,56 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const beginnerCheckbox = document.getElementById("beginner");
+  const beginnerCourses = document.querySelectorAll(".beginner-course");
+
+  beginnerCheckbox.addEventListener("change", function () {
+    if (beginnerCheckbox.checked) {
+      // Show only beginner courses
+      beginnerCourses.forEach(function (course) {
+        course.style.display = "flex";
+      });
+      // Hide other courses
+      document
+        .querySelectorAll(".course-card:not(.beginner-course)")
+        .forEach(function (course) {
+          course.style.display = "none";
+        });
+    } else {
+      // Show all courses
+      document.querySelectorAll(".course-card").forEach(function (course) {
+        course.style.display = "flex";
+      });
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const advanceCheckbox = document.getElementById("advanced");
+  const advanceCourses = document.querySelectorAll(".advance-course");
+
+  advanceCheckbox.addEventListener("change", function () {
+    if (advanceCheckbox.checked) {
+      // Show only advance courses
+      advanceCourses.forEach(function (course) {
+        course.style.display = "flex";
+      });
+      // Hide other courses
+      document
+        .querySelectorAll(".course-card:not(.advance-course)")
+        .forEach(function (course) {
+          course.style.display = "none";
+        });
+    } else {
+      // Show all courses
+      document.querySelectorAll(".course-card").forEach(function (course) {
+        course.style.display = "flex";
+      });
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const webDevelopmentCheckbox = document.getElementById("web-development");
   const webDevelopmentCourses = document.querySelectorAll(
     ".web-development-course"
@@ -92,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   webDevelopmentCheckbox.addEventListener("change", function () {
     if (webDevelopmentCheckbox.checked) {
-      // Show only Information Technology courses
+      // Show only Web Development courses
       webDevelopmentCourses.forEach(function (course) {
         course.style.display = "flex";
       });
@@ -121,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   computerProgrammingCheckbox.addEventListener("change", function () {
     if (computerProgrammingCheckbox.checked) {
-      // Show only Information Technology courses
+      // Show only computer-programming
       computerProgrammingCourses.forEach(function (course) {
         course.style.display = "flex";
       });

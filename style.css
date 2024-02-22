@@ -145,7 +145,7 @@ form input{
     transition: 0.2s ease-in-out;
     margin: 20px;
     background-color: #fff;
-    /* overflow: scroll; */
+    overflow: scroll;
 }
 .card:hover{
     transform: scale(1.04);
@@ -255,6 +255,7 @@ ul li{
     .footer{
         flex-direction: column;
         background-color: blue;
+        color: #fff;
     }
 }
 
